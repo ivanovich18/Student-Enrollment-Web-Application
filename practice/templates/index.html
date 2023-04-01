@@ -11,40 +11,60 @@
 </head>
 
 <body>
-    <form action="/register" action="post">
-        <div class="mb-3">
-            <label for="id_number" class="form-label">Id Number</label>
-            <input type="text" class="form-control" autocomplete="off" id="id_number" name="id_number">
+    <form class="row g-3" action="/register" action="post">
+        <div class="col-md-4">
+            <label for="id_number" class="form-label">ID Number</label>
+            <input type="text" class="form-control" autocomplete="off" iD="id_number" name="id_number">
         </div>
-        <div class="mb-3">
+        <div class="col-md-4">
             <label for="first_name" class="form-label">First Name</label>
             <input type="text" class="form-control" autocomplete="off" id="first_name" name="first_name">
         </div>
-        <div class="mb-3">
+        <div class="col-md-4">
             <label for="last_name" class="form-label">Last Name</label>
             <input type="text" class="form-control" autocomplete="off" id="last_name" name="last_name">
         </div>
-        <div class="mb-3">
+        <div class="col-md-4">
             <label for="birthday" class="form-label">Birthday</label>
             <input type="text" class="form-control" autocomplete="off" id="birthday" name="birthday">
         </div>
-        <div class="mb-3">
-            <label for="sex" class="form-label">Sex</label>
-            <input type="text" class="form-control" autocomplete="off" id="sex" name="sex">
+        <div class="col-md-4">
+            <label for="gender" class="form-label">Gender</label>
+            <select class="form-select" id="gender">
+                <option selected>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="non-binary">Non-binary</option>
+            </select>
         </div>
-        <div class="mb-3">
+        <div class="col-md-4">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                    value="option1">
+                <label class="form-check-label" for="inlineRadio1">1</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                    value="option2">
+                <label class="form-check-label" for="inlineRadio2">2</label>
+            </div>
+        </div>
+
+        <div class="col-md-12">
             <label for="address" class="form-label">Address</label>
             <input type="text" class="form-control" autocomplete="off" id="address" name="address">
         </div>
-        <div class="mb-3">
+        <div class="col-md-6">
             <label for="department" class="form-label">Department</label>
             <input type="text" class="form-control" autocomplete="off" id="department" name="department">
         </div>
-        <div class="mb-3">
+        <div class="col-md-6">
             <label for="program" class="form-label">Program</label>
             <input type="text" class="form-control" autocomplete="off" id="program" name="program">
         </div>
         <button class="btn btn-primary">Enroll</button>
+        <button class="btn btn-primary">Clear</button>
+        <button class="btn btn-primary">Cancel</button>
 </body>
 
 </html>
