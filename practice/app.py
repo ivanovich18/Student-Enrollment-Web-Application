@@ -1,4 +1,16 @@
 from cs50 import SQL
-from flask import Flask, render_template, requests
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
+
+
+@app.route("/", methods=["GET", "POST"])
+def index():
+    if request.method == "GET":
+        return render_template("index.html")
+
+
+@app.route("/table", methods=["GET", "POST"])
+def table():
+    if request.method == "GET":
+        return render_template("table.html")
