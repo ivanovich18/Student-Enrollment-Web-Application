@@ -6,15 +6,35 @@ Student Records
 
 {% block main %}
 <div class="container min-vh-100 d-flex justify-content-center align-items-center">
-    <table class="table table-dark table-hover">
+
+    <table class="table table-hover">
+        <caption class="text-center">Student Records</caption>
         <thead>
-            <tr>
-                <th>ID Number</th>
-                <th>Name</th>
-                <th>Department</th>
-                <th>Program</th>
+            <th>ID Number</th>
+            <th>Type</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Program</th>
+            <th></th>
             </tr>
         </thead>
+        <tbody>
+            {% for record in records %}
+            <tr>
+                <td>{{record.id_number}}</td>
+                <td>{{record.student_type}}</td>
+                <td>{{record.first_name}} {{record.last_name}}</td>
+                <td>{{record.department}}</td>
+                <td>{{record.program}}</td>
+                <td>
+                    <form action="/deregister" method="post">
+                        <input name="id" type="hidden" value="{{ record.id_number }}">
+                        <button class="btn btn-danger" type="submit">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
     </table>
 </div>
 

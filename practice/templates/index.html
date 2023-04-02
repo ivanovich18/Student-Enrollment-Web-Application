@@ -1,17 +1,17 @@
 {% extends "layout.html"%}
 {% block title %}
 Register
-{% endblock%}
+{% endblock %}
 
 
-{%block main%}
+{% block main %}
 <div class="container min-vh-100 d-flex justify-content-center align-items-center">
 
-    <form class="form row g-3" action="/register" action="post">
+    <form class="form row g-3">
         <h1 class="text-center">Student Enrollment Form</h1>
         <div class="col-md-4">
             <label for="id_number" class="form-label">ID Number</label>
-            <input type="text" class="form-control" autocomplete="off" iD="id_number" name="id_number">
+            <input type="text" class="form-control" autocomplete="off" id="id_number" name="id_number">
         </div>
         <div class="col-md-4">
             <label for="first_name" class="form-label">First Name</label>
@@ -27,24 +27,21 @@ Register
         </div>
         <div class="col-md-4">
             <label for="gender" class="form-label">Gender</label>
-            <select class="form-select" id="gender">
+            <select class="form-select" id="gender" name="gender">
                 <option selected>Select Gender</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="non-binary">Non-binary</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Non-binary">Non-binary</option>
             </select>
         </div>
         <div class="col-md-4">
             <label for="type" class="form-label">Type</label>
             <div id="type">
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="old" id="old" value="old">
-                    <label class="form-check-label" for="old">Old</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="new" id="new" value="new">
-                    <label class="form-check-label" for="new">New</label>
-                </div>
+                <select class="form-select" id="type" name="type">
+                    <option selected>Select Type</option>
+                    <option value="Old">Old</option>
+                    <option value="New">New</option>
+                </select>
             </div>
         </div>
         <div class="col-md-12">
@@ -53,14 +50,16 @@ Register
         </div>
         <div class="col-md-6">
             <label for="department" class="form-label">Department</label>
-            <select class="form-select" id="department">
+            <select class="form-select" id="department" name="department">
                 <option selected>Select Department</option>
-                <option value="cas">College of Arts and Sciences</option>
-                <option value="ccict">College of Computer, Information and Communications Technology</option>
-                <option value="cme">College of Management and Entrepreneurship</option>
-                <option value="coe">College of Engineering</option>
-                <option value="coe">College of Education</option>
-                <option value="cot">College of Technology</option>
+                <option value="College of Arts and Sciences">College of Arts and Sciences</option>
+                <option value="College of Computer, Information and Communications Technology">College of Computer,
+                    Information and Communications Technology</option>
+                <option value="College of Management and Entrepreneurship">College of Management and Entrepreneurship
+                </option>
+                <option value="College of Engineering">College of Engineering</option>
+                <option value="College of Education">College of Education</option>
+                <option value="College of Technology">College of Technology</option>
 
             </select>
         </div>
@@ -69,9 +68,11 @@ Register
             <input type="text" class="form-control" autocomplete="off" id="program" name="program">
         </div>
         <div class="d-grid gap-2 col-6 mx-auto">
-            <button class="btn1 btn btn-danger" type="button">Clear</button>
-            <button class="btn btn-success" type="button">Enroll</button>
-        </div>
+            <!-- <button class="btn1 btn btn-danger" type="button">Clear</button> -->
+            <button class="btn btn-success" formaction="/" formmethod="post">Enroll</button>
+            <button class="btn btn-primary" formaction="/table" formmethod="get">Records</button>
     </form>
+</div>
+</form>
 </div>
 {% endblock %}
