@@ -50,7 +50,7 @@ Register
         </div>
         <div class="col-md-6">
             <label for="department" class="form-label">Department</label>
-            <select class="form-select" id="department" name="department">
+            <select class="form-select" id="department" name="department" required>
                 <option selected>Select Department</option>
                 <option value="College of Arts and Sciences">College of Arts and Sciences</option>
                 <option value="College of Computer, Information and Communications Technology">College of Computer,
@@ -69,7 +69,8 @@ Register
         </div>
         <div class="d-grid gap-2 col-6 mx-auto">
             <!-- <button class="btn1 btn btn-danger" type="button">Clear</button> -->
-            <button class="btn btn-success" formaction="/" formmethod="post">Enroll</button>
+            <button class="btn btn-success" formaction="/index" formmethod="post"
+                onclick="enroll_checker()">Enroll</button>
             <button class="btn btn-primary" formaction="/table" formmethod="get">Records</button>
     </form>
 </div>

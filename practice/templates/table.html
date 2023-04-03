@@ -29,13 +29,16 @@ Student Records
                 <td>
                     <form action="/deregister" method="post">
                         <input name="id" type="hidden" value="{{ record.id_number }}">
-                        <button class="btn btn-danger" type="submit">Delete</button>
+                        <button class="btn btn-danger" type="submit" onclick="delete_checker()">Delete</button>
                     </form>
                 </td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
+    <form action="/export" method="post">
+        <button class="btn btn-primary" type="submit">Export as CSV</button>
+    </form>
 </div>
 
 {% endblock %}
