@@ -1,4 +1,4 @@
-# Student Enrollment Form Web Application
+# Student Enrollment Web Application
 ## It is a simple Python Flask web application that gathers student information and stores the inputted data into a SQLite database. Only the admin of the program can access the web application.
 ### Languages used:
 - HTML 
